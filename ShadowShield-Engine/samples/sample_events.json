@@ -1,1 +1,9 @@
-
+{
+  "rule_name": "traffic_spike",
+  "src_ip": "10.0.2.15",
+  "packets_per_min": 4000,
+  "flag": false,
+  "risk_level": "LOW",
+  "action": "ALLOW",
+  "timestamp": "2026-04-01T09:06:49.296392Z"
+}
