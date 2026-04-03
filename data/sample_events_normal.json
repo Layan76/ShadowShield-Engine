@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-04-04T00:10:00Z",
+    "src_ip": "192.168.1.10",
+    "dest_ip": "8.8.8.8",
+    "proto": "ICMP",
+    "event_type": "traffic_spike",
+    "packets": 4000,
+    "bytes": 320000,
+    "description": "Normal ICMP traffic spike test case"
+  }
+]
