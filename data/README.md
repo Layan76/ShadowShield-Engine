@@ -1,22 +1,22 @@
 # ShadowShield Data
 
-هذا المجلد يحتوي على بيانات تجريبية تستخدم لاختبار محرك القرارات في ShadowShield.
+This folder contains experimental datasets used to test the ShadowShield decision engine.
 
-## الملفات
+## Files
 
 - `sample_events.json`  
-  ملف تجميعي يحتوي على مجموعة متنوعة من الأحداث (طبيعية ومشبوهة) لعناوين IP مختلفة.  
-  يستخدم لاختبار سلوك المحرك على خليط من السيناريوهات في تشغيل واحد.
+  A mixed dataset that combines both normal and suspicious network events for multiple IP addresses.  
+  It is used to observe how the engine behaves when different scenarios are evaluated in a single run.
 
 - `sample_events_normal.json`  
-  يحتوي على أحداث تمثّل ترافيك طبيعي بدون نشاط ضار واضح.  
-  الهدف منه التأكد من أن قواعد ShadowShield (مثل `traffic_spike`) لا تنتج إنذارات خاطئة وأن القرارات تكون غالبًا LOW / ALLOW.
+  Contains network events that represent **normal** traffic with no clear malicious activity.  
+  It is used to verify that ShadowShield rules (such as `traffic_spike`) do not generate false positives and that most decisions remain LOW / ALLOW.
 
 - `sample_events_suspicious.json`  
-  يحتوي على أحداث فيها أنماط غير طبيعية مثل ارتفاع حاد في عدد الحزم لبعض العناوين (traffic spikes) أو نشاط يقترب من حدود القاعدة.  
-  يستخدم للتحقق من أن القواعد تميّز الترافيك المشبوه وتنتج قرارات MEDIUM / HIGH مع `ALERT` عند الحاجة.
+  Contains events with unusual patterns, such as sharp increases in packet counts for specific IPs (traffic spikes) or activity close to rule thresholds.  
+  It is used to validate that the rules can correctly flag suspicious traffic and produce MEDIUM / HIGH decisions with `ALERT` when appropriate.
 
-## طريقة الاستخدام
+## Usage
 
-- سكربت `shadowshield_engine.py` يقرأ هذه الملفات ويبني منها `test_cases` لقواعد مثل `detect_traffic_spike`.  
-- القرارات الناتجة تُسجَّل كسطور JSON في `shadowshield_events.log`، مما يسهّل تحليل عدد القرارات LOW / MEDIUM / HIGH لكل نوع من أنواع البيانات.
+- The `shadowshield_engine.py` script reads these files and converts each record into `test_cases` for rules like `detect_traffic_spike`.  
+- The resulting decisions are written as JSON lines into `shadowshield_events.log`, making it easy to analyze how many LOW / MEDIUM / HIGH decisions are produced for each dataset.
