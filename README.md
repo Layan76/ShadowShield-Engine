@@ -14,17 +14,13 @@ The project is designed as a practical cybersecurity prototype that can be exten
 
 ## Components
 
-- **Detection Engine**  
-  Custom logic to detect abnormal traffic (e.g., traffic spikes) per source IP using simple metrics such as packets per minute.
+- **Detection Engine
 
-- **Decision Engine**  
-  Translates detection results into human-readable security decisions, including:  
-  - rule_name  
-  - src_ip  
-  - packets_per_min  
-  - risk_level  
-  - action (ALLOW / ALERT / BLOCK)  
-  - timestamp (UTC, ISO 8601 format)
+Analyzes network-related activity using predefined detection logic to identify abnormal traffic patterns such as unusual traffic spikes associated with individual source IP addresses.
+
+- **Decision Engine
+
+Converts detection results into structured security decisions and assigns an appropriate risk level and response action.
 
 - **Logging Layer**  
   Every decision is written as a separate JSON record to `shadowshield_events.log`, making it easy to parse, analyze, or forward to other tools.
