@@ -1,4 +1,4 @@
-ShadowShield-Engine — SOC Threat Detection & Decision Engine
+## ShadowShield-Engine — SOC Threat Detection & Decision Engine
 
 ShadowShield-Engine is a cybersecurity threat detection and decision-support prototype designed to analyze network activity, identify abnormal traffic patterns, classify security risks, and generate structured security events for SOC-oriented monitoring and analysis.
 
