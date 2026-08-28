@@ -14,11 +14,11 @@ The project is designed as a practical cybersecurity prototype that can be exten
 
 ## Components
 
-- **Detection Engine
+- **Detection Engine**
 
 Analyzes network-related activity using predefined detection logic to identify abnormal traffic patterns such as unusual traffic spikes associated with individual source IP addresses.
 
-- **Decision Engine
+- **Decision Engine**
 
 Converts detection results into structured security decisions and assigns an appropriate risk level and response action.
 
