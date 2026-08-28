@@ -1,6 +1,6 @@
 # ShadowShield-Engine
 
-ShadowShield-Engine is a lightweight home network defense prototype that combines a detection engine, decision engine, and structured security logging to monitor and react to abnormal traffic patterns.
+ShadowShield-Engine is a cybersecurity threat detection and decision-support prototype designed to analyze network activity, identify abnormal traffic patterns, classify security risks, and generate structured security events for SOC-oriented monitoring and analysis.
 
 ## Project Overview
 
