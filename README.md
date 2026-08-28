@@ -4,10 +4,13 @@ ShadowShield-Engine is a cybersecurity threat detection and decision-support pro
 
 ## Project Overview
 
-This project aims to provide an intelligent security layer for small / home networks.  
-The system monitors network activity, detects traffic spikes for each source IP, classifies the risk level (LOW / MEDIUM / HIGH), and generates a corresponding security decision (ALLOW / ALERT / BLOCK) with a precise timestamp.
+ShadowShield-Engine provides a structured security monitoring pipeline for detecting and evaluating suspicious network activity.
 
-All decisions are stored in a unified JSON log file (shadowshield_events.log), which can later be analyzed or visualized in a dashboard or SIEM-like interface.
+The system analyzes traffic-related events, identifies abnormal behavior based on predefined detection logic, assigns a risk level (LOW / MEDIUM / HIGH), and generates an appropriate security decision (ALLOW / ALERT / BLOCK).
+
+Security decisions are stored as structured JSON logs containing relevant information such as the source IP, detection rule, traffic metrics, risk level, recommended action, and timestamp.
+
+The project is designed as a practical cybersecurity prototype that can be extended with IDS telemetry, SIEM integration, additional detection rules, and automated response capabilities.
 
 ## Components
 
